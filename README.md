@@ -138,16 +138,38 @@ The project includes performance comparison between:
 - ROC-AUC
 - Trustworthiness Analysis
 
-## RNN vs Transformers
--
-Transformer Final Results (from logs): 
-• Training Accuracy: ~90.5% 
-• Validation Accuracy: ~88.3% 
-• Validation Loss: ~0.29 
-GRU Results: 
-• Training Accuracy: ~86–88% 
-• Validation Accuracy: ~85–87% 
+## Performance Results
+
+### Transformer Model Results
+
+Final performance obtained from training logs:
+
+| Metric | Value |
+|---|---|
+| Training Accuracy | ~90.5% |
+| Validation Accuracy | ~88.3% |
+| Validation Loss | ~0.29 |
+
+The Transformer-based architecture demonstrated strong performance in capturing long-range temporal dependencies and complex driving behavior patterns from sequential sensor data.
+
 ---
+
+### GRU Model Results
+
+| Metric | Value |
+|---|---|
+| Training Accuracy | ~86–88% |
+| Validation Accuracy | ~85–87% |
+
+The GRU model achieved competitive performance with lower computational complexity and faster training compared to Transformer-based models.
+
+---
+
+### Comparative Observation
+
+- Transformer models achieved higher validation accuracy and better contextual sequence understanding.
+- GRU models provided efficient sequence learning with comparatively lower computational requirements.
+- Transformer architectures performed better for long sequential sensor streams and complex driving behavior patterns.
 
 ## Streamlit Dashboard
 
