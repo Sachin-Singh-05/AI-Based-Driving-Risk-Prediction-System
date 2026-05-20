@@ -1,96 +1,42 @@
 # AI-Based Driver Risk Prediction System
 
-An AI-powered Driver Risk Prediction System that analyzes motion sensor data collected from Android smartphones to evaluate driving behavior and generate a Driving Risk Score. The system uses accelerometer and gyroscope readings to identify unsafe riding patterns and classify rider behavior using Machine Learning and Deep Learning techniques.
+An AI-powered Driver Risk Prediction System that analyzes accelerometer and gyroscope sensor data collected from Android smartphones to evaluate two-wheeler driving behavior and generate a Driving Risk Score.
+
+The project uses Machine Learning and Deep Learning models to classify riding patterns as safe, moderate, or risky based on motion sensor readings.
 
 ---
 
 ## Project Overview
 
-This project focuses on analyzing two-wheeler driving behavior using smartphone motion sensors. Sensor readings are captured using an Android application and used to build a dataset representing the motion characteristics of riders under different real-world driving conditions.
+This project focuses on building a real-world driving behavior analysis system using smartphone motion sensors.
 
-The objective of the project is to:
-
-- Collect motion sensor data from Android devices
-- Build a diverse driving behavior dataset
-- Train Machine Learning and Deep Learning models
-- Generate Driving Score / Risk Score
-- Evaluate model trustworthiness and prediction reliability
-- Compare traditional sequence models with Transformer-based architectures
-
----
-
-## Problem Statement
-
-Use the Android application designed to capture readings from motion sensors (accelerometer and gyroscope) in an Android phone. Build a dataset containing the motion characteristics of an average person driving a two-wheeler.
-
-The dataset includes:
+Sensor data was collected using an Android application under different driving conditions including:
 - Multiple riders
 - Multiple vehicles
 - Different riding speeds
 - Different phone placements
 
-Build a model that generates a Driving Score / Risk Score indicating the driving behavior of an individual and evaluate the trustworthiness of the model.
-
-Bonus:
-Compare the performance of RNN-based architectures (LSTM/GRU) with Transformer-based models for the task.
+The collected dataset was used to train and compare Machine Learning and Deep Learning models for driver risk prediction.
 
 ---
 
 ## Features
 
-- Sensor-based driving behavior analysis
-- Accelerometer and gyroscope data processing
-- Driver risk prediction using Machine Learning
-- Driving Score generation
+- Driving Risk Score prediction
+- Accelerometer and gyroscope data analysis
+- Real-world sensor dataset creation
 - Streamlit-based interactive dashboard
-- Sensor visualization and analytics
-- Real-world riding dataset creation
+- Driving behavior visualization
+- Deep Learning sequence modeling
+- RNN vs Transformer comparison
 - Trustworthiness evaluation of predictions
-- Comparative analysis of RNNs and Transformers
-
----
-
-## Dataset Collection
-
-The dataset was created using an Android application that records smartphone motion sensor readings during two-wheeler rides.
-
-### Sensors Used
-- Accelerometer
-- Gyroscope
-
-### Dataset Variations
-- Multiple riders
-- Multiple vehicles
-- Different riding speeds
-- Different phone placements
-- Different driving conditions
-
-### Data Captured
-- Accelerometer X, Y, Z
-- Gyroscope X, Y, Z
-- Timestamp-based sequential readings
-
----
-
-## Machine Learning Workflow
-
-1. Sensor Data Collection
-2. Data Cleaning and Preprocessing
-3. Feature Engineering
-4. Sequence Preparation
-5. Model Training
-6. Risk Score Generation
-7. Model Evaluation
-8. Streamlit Deployment
 
 ---
 
 ## Technologies Used
 
-### Programming Language
+### Programming & ML
 - Python
-
-### Machine Learning & Deep Learning
 - Scikit-learn
 - TensorFlow
 - Keras
@@ -103,83 +49,67 @@ The dataset was created using an Android application that records smartphone mot
 - Plotly
 - Matplotlib
 
-### Web Application
-- Streamlit
-
 ### Deployment
+- Streamlit
 - Streamlit Cloud
 
 ---
 
-## Model Architectures
+## Dataset
 
-### Deep Learning Models
-- LSTM
-- GRU
-- Transformer-based models
+The dataset contains sequential motion sensor readings captured from Android smartphones during two-wheeler rides.
+
+### Sensors Used
+- Accelerometer
+- Gyroscope
+
+### Input Features
+- Accelerometer X, Y, Z
+- Gyroscope X, Y, Z
+- Sequential motion patterns
+
+### Output
+- Safe Driving
+- Moderate Risk
+- High Risk
 
 ---
 
-## Comparative Analysis
+## Models Used
 
-The project includes performance comparison between:
+### Deep Learning Models
+- GRU
+- Transformer
 
-| Model Type | Purpose |
-|---|---|
-| LSTM | Sequential driving behavior analysis |
-| GRU | Lightweight sequential modeling |
-| Transformer | Attention-based sequence learning |
-
-### Evaluation Metrics
-- Accuracy
-- Precision
-- Recall
-- F1-Score
-- ROC-AUC
-- Trustworthiness Analysis
+---
 
 ## Performance Results
 
-### Transformer Model Results
-
-Final performance obtained from training logs:
-
+### Transformer Model
 | Metric | Value |
 |---|---|
 | Training Accuracy | ~90.5% |
 | Validation Accuracy | ~88.3% |
 | Validation Loss | ~0.29 |
 
-The Transformer-based architecture demonstrated strong performance in capturing long-range temporal dependencies and complex driving behavior patterns from sequential sensor data.
-
----
-
-### GRU Model Results
-
+### GRU Model
 | Metric | Value |
 |---|---|
 | Training Accuracy | ~86–88% |
 | Validation Accuracy | ~85–87% |
 
-The GRU model achieved competitive performance with lower computational complexity and faster training compared to Transformer-based models.
+### Observation
+Transformer models achieved better sequence understanding and higher validation accuracy compared to GRU models for long sensor sequences.
 
 ---
-
-### Comparative Observation
-
-- Transformer models achieved higher validation accuracy and better contextual sequence understanding.
-- GRU models provided efficient sequence learning with comparatively lower computational requirements.
-- Transformer architectures performed better for long sequential sensor streams and complex driving behavior patterns.
 
 ## Streamlit Dashboard
 
 The project includes an interactive Streamlit dashboard for:
-
 - Uploading sensor CSV files
-- Visualizing accelerometer and gyroscope signals
-- Predicting driving risk
-- Generating driving scores
-- Displaying analytics and risk insights
+- Predicting driver risk
+- Visualizing sensor signals
+- Displaying driving analytics and risk scores
 
 ---
 
@@ -191,18 +121,7 @@ AI-Driver-Risk-Prediction-System/
 ├── app.py
 ├── requirements.txt
 ├── models/
-│   ├── random_forest.pkl
-│   ├── lstm_model.h5
-│   └── transformer_model.h5
-│
 ├── dataset/
-│   ├── raw_data/
-│   └── processed_data/
-│
 ├── notebooks/
-│   └── AI_Based_Driver_Risk_Prediction_System.ipynb
-│
 ├── assets/
-│   └── dashboard.png
-│
 └── README.md
