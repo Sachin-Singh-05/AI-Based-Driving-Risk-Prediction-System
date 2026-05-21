@@ -49,7 +49,7 @@ The collected dataset was used to train and compare Machine Learning and Deep Le
 - Plotly
 - Matplotlib
 
-### Deployment (Working)
+### Deployment
 - Streamlit
 - Streamlit Cloud
 
