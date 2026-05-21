@@ -49,7 +49,7 @@ The collected dataset was used to train and compare Machine Learning and Deep Le
 - Plotly
 - Matplotlib
 
-### Deployment
+### Deployment (Working)
 - Streamlit
 - Streamlit Cloud
 
@@ -103,7 +103,7 @@ Transformer models achieved better sequence understanding and higher validation 
 
 ---
 
-## Streamlit Dashboard
+## Streamlit Dashboard (Working)
 
 The project includes an interactive Streamlit dashboard for:
 - Uploading sensor CSV files
